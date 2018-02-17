@@ -15,63 +15,28 @@
                 state('root', {
                         abstract: true,
                         url: '/',
-                        data: {
-                            title: 'title',
-                            breadcrumb: 'breadcrumb'
-                        },
+                        data: {},
                         views: {
                             'header': {
-                                templateUrl: 'core/layouts/headerView.html',
-                                controller: 'HeaderController',
+                                templateUrl: 'core/header/headerView.html'
                             },
-                            'aside': {
-                                templateUrl: 'core/layouts/asideView.html',
-                                controller: 'AsideController',
-                            },
-                            'breadcrumbs': {
-                                templateUrl: 'core/layouts/breadcrumbsView.html',
-                                controller: 'BreadcrumbsController',
+                            'sidebar': {
+                                templateUrl: 'core/sidebar/sidebarView.html'
                             },
                             'content': {
                                 template: 'Choose option from menu...'
-                            },
-                            'footer': {
-                                templateUrl: 'core/layouts/footerView.html',
-                                controller: 'FooterController',
                             }
                         }
                     });
-            $stateProvider.state('login',{
-                url:'/login',
-                views: {
-                    'auth': {
-                        templateUrl: 'core/auth/loginView.html',
-                        controller:'LoginController',
-                    }
-                },
-                css:[],
-
-            });
-            $stateProvider.state('register',{
-                url:'/register',
-                views: {
-                    'auth': {
-                        templateUrl: 'core/auth/registerView.html',
-                        controller:'RegisterController',
-                    }
-                },
-                css:[]
-            });
             $stateProvider.state('root.dashboard',{
                 url:'dashboard',
                 views: {
                     'content@': {
-                        templateUrl: 'core/dashboard/dashboardView.html',
-                        controller:'DashboardController',
+                        templateUrl: 'core/dashboard/dashboardView.html'
                     }
                 },
-                css:['assets/css/dashboard.css']
+                css:[]
             });
-            $urlRouterProvider.otherwise('/login');
+            $urlRouterProvider.otherwise('/dashboard');
         });
 }());
