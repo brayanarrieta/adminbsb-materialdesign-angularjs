@@ -33,42 +33,7 @@
 </head>
 
 <body class="theme-red" data-ng-app="app">
-    <!--&lt;!&ndash; Page Loader &ndash;&gt;-->
-    <!--<div class="page-loader-wrapper">-->
-        <!--<div class="loader">-->
-            <!--<div class="preloader">-->
-                <!--<div class="spinner-layer pl-red">-->
-                    <!--<div class="circle-clipper left">-->
-                        <!--<div class="circle"></div>-->
-                    <!--</div>-->
-                    <!--<div class="circle-clipper right">-->
-                        <!--<div class="circle"></div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<p>Please wait...</p>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; #END# Page Loader &ndash;&gt;-->
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
-    <!-- #END# Overlay For Sidebars -->
-    <!-- Search Bar -->
-    <div class="search-bar">
-        <div class="search-icon">
-            <i class="material-icons">search</i>
-        </div>
-        <input type="text" placeholder="START TYPING...">
-        <div class="close-search">
-            <i class="material-icons">close</i>
-        </div>
-    </div>
-    <!-- #END# Search Bar -->
-    <div data-ui-view="header"></div>
-    <section data-ui-view="sidebar"></section>
-    <section class="content">
-        <div class="container-fluid" data-ui-view="content"></div>
-    </section>
+    <div ui-view></div>
 
     <!-- Jquery Core Js -->
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
@@ -106,7 +71,7 @@
     <script src="./bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 
     <!-- Custom Js -->
-    <script src="./assets/js/admin.js"></script>
+
     <!--<script src="./assets/js/pages/index.js"></script>-->
 
     <!-- Demo Js -->
@@ -117,9 +82,11 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-css/angular-css.min.js"></script>
+    <script src="bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
     <!-- Application scripts: -->
     <script src="core/app.js"></script>
     <script src="core/app.routes.js"></script>
+    <script src="core/layouts/root/rootController.js"></script>
 </body>
 
 </html>
